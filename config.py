@@ -29,3 +29,28 @@ WHISPER_CONFIG = {
     'prepend_punctuations': "\"'([{-",
     'append_punctuations': "\"'.!?()[]{},:;",
 }
+
+# LLM Configuration
+LLM_CONFIG = {
+    # General LLM settings
+    'default_provider': 'ollama',  # Default LLM provider
+    'max_conversation_history': 10,  # Maximum conversation history to keep
+    
+    # Ollama settings
+    'ollama_model': 'llama2',  # Default Ollama model
+    'ollama_base_url': 'http://localhost:11434',  # Ollama server URL
+    
+    # OpenAI settings (optional)
+    'openai_model': 'gpt-3.5-turbo',  # Default OpenAI model
+    'openai_api_key': None,  # Set your OpenAI API key here
+    'openai_base_url': 'https://api.openai.com/v1',  # OpenAI API base URL
+    
+    # Anthropic settings (optional)
+    'anthropic_model': 'claude-3-haiku-20240307',  # Default Anthropic model
+    'anthropic_api_key': None,  # Set your Anthropic API key here
+    
+    # System prompt for conversational AI
+    'system_prompt': """You are a helpful, friendly, and intelligent conversational AI assistant. 
+    You engage in natural conversations, provide helpful information, and respond appropriately to user queries. 
+    Keep your responses conversational, concise, and engaging. If you don't know something, be honest about it."""
+}
